@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
-var MongooseSchema = new mongoose.Schema({
-    name: String,
-    weight: Number,
-    color: String
+var FriendSchema = new mongoose.Schema({
+    firstname: String,
+    lastname: String,
+    birthday: Date
 });
 
-mongoose.model('Mongoosedb', MongooseSchema);
+mongoose.model('Frienddb', FriendSchema);
 // Validations
-MongooseSchema.path('color').required(true, 'Color cannot be blank');
-MongooseSchema.path('weight').required(true, 'Weight cannot be blank');
-MongooseSchema.path('name').required(true, 'Name cannot be blank');
+FriendSchema.path('birthday').required(true, 'Birthday cannot be blank');
+FriendSchema.path('lastname').required(true, 'Last Name cannot be blank');
+FriendSchema.path('firstname').required(true, 'First Name cannot be blank');

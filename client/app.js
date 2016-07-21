@@ -14,5 +14,18 @@ var myApp = angular.module('Myapp', ['ngRoute']);
 				controller: 'indexController',
 				templateUrl: "partials/index.html"
 			})
+			.when('/friend/edit/:id', {
+				controller: "editController", 
+				templateUrl: "partials/edit.html"
+			})
+			.when('/friend/new', {
+				controller: "newController",
+				templateUrl: "partials/new.html"
+			})
+			.when('/friend/:id', 
+			{
+				controller: 'showController', 
+				templateUrl: "partials/show.html"
+			})			
 	})
 }());

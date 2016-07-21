@@ -1,1 +1,9 @@
-<h1>This is my index partial</h1>
+<h1>Friends:</h1>
+
+<div ng-repeat = "friend in friends">
+	<h2><a href = "#/friend/{{friend._id}}">{{friend.firstname}} {{friend.lastname}}</a> </h2>
+	<p>{{friend._id}}</p>
+	<h3>{{friend.birthday}}</h3>
+	<button type="button" ng-click = "deleteFriend(friend)">Delete this Fool</button>
+	</div>
+<h2> <a href="#/friend/new"> Make a new Friend</a></h2>
